@@ -12,9 +12,9 @@ import rmi_base.Turma;
 
 public class Client {
 
-    public Client(String host) {
+    public Client(String host, int port) {
     	try {
-            reg = LocateRegistry.getRegistry(host);
+            reg = LocateRegistry.getRegistry(host,port);
             stub = (EPRMI) reg.lookup("EPRMI");
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());

@@ -75,7 +75,7 @@ public class Main {
 	   * greeting.
 	   */
 	  public static void main(String[] args) throws Exception {
-	    Client client = new Client("localhost");
+	    Client client = new Client("192.168.0.25",1099);
 	    try {
 	    	//client.testVoid();
 	    	
