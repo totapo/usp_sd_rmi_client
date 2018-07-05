@@ -170,19 +170,20 @@ public class Client {
 
 	public long testException() {
 		long start, finish;
+	      start = System.nanoTime();
 		  try {
 		      //logger.info("Will try to run tests ");
 		      //marcar tempo
-		      start = System.nanoTime();
 		      stub.testException();
 		      finish = System.nanoTime();
 		      //marcar tempo
 		      //logger.info("Done");
-		      return finish-start;
+		      //return finish-start;
 		    } catch (Exception e) {
+			      finish = System.nanoTime();
 		      //logger.log(Level.WARNING, "RPC failed", e);
-		      return -1;
 		    }
+	      return finish-start;
 	}
     
     
